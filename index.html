@@ -2,56 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Weather App | JavaScript Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RecipeJS - Functional Cooking Companion</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>🍳 RecipeJS</h1>
-    <p>Your Functional Cooking Companion</p>
+    <main class="container">
+        <h1>🌤 Weather App</h1>
 
-    <!-- SEARCH BAR (PART 4 REQUIRED) -->
-    <div class="search-bar">
-        <input
-            type="text"
-            id="search-input"
-            placeholder="Search recipes..."
-        />
-        <button id="clear-search">✖</button>
-    </div>
-</header>
+        <form class="weatherForm" autocomplete="off">
+            <input 
+                type="text" 
+                class="cityInput" 
+                placeholder="Enter city name..." 
+                required
+            >
+            <button type="submit">Search</button>
+        </form>
 
-<main>
+        <div class="card" style="display: none;" aria-live="polite"></div>
+    </main>
 
-    <!-- Controls Section -->
-    <section class="controls">
-        <div class="filter-controls">
-            <button data-filter="all" class="active">Show All</button>
-            <button data-filter="easy">Easy</button>
-            <button data-filter="medium">Medium</button>
-            <button data-filter="hard">Hard</button>
-            <button data-filter="quick">Quick Recipes</button>
-            <button data-filter="favorites">Favorites ❤️</button>
-        </div>
-
-        <div class="sort-controls">
-            <button data-sort="none" class="active">Default Order</button>
-            <button data-sort="name">Name (A–Z)</button>
-            <button data-sort="time">Time (Fastest)</button>
-        </div>
-    </section>
-
-    <!-- RECIPE COUNTER (PART 4 REQUIRED) -->
-    <p id="recipe-counter"></p>
-
-    <div id="recipe-container">
-        <!-- Recipes rendered by JS -->
-    </div>
-
-</main>
-
-<script src="app.js"></script>
+    <script src="app.js" defer></script>
 </body>
 </html>
